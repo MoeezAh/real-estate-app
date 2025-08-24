@@ -82,8 +82,7 @@ A full-stack real estate portal for property buyers to search, explore, and save
           "bedrooms": 4,
           "description": "...",
           "images": [ { "id": 1, "url": "..." } ]
-        },
-        // ...
+        }
       ]
     }
     ```
