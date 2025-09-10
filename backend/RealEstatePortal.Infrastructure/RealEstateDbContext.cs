@@ -7,10 +7,10 @@ namespace RealEstatePortal.Infrastructure
 	{
 		public RealEstateDbContext(DbContextOptions<RealEstateDbContext> options) : base(options) { }
 
-	public DbSet<Property> Properties { get; set; }
-	public DbSet<PropertyImage> PropertyImages { get; set; }
-	public DbSet<User> Users { get; set; }
-	public DbSet<Favorite> Favorites { get; set; }
+		public DbSet<Property> Properties { get; set; }
+		public DbSet<PropertyImage> PropertyImages { get; set; }
+		public DbSet<User> Users { get; set; }
+		public DbSet<Favorite> Favorites { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -60,7 +60,7 @@ namespace RealEstatePortal.Infrastructure
 				{
 					Id = i,
 					PropertyId = i,
-					Url = $"https://source.unsplash.com/600x400/?house,pakistan,{city},{title.Replace(" ","")}"
+					Url = $"https://source.unsplash.com/600x400/?house,pakistan,{city},{title.Replace(" ", "")}"
 				});
 			}
 			modelBuilder.Entity<Property>().HasData(properties);
